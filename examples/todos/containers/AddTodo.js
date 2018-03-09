@@ -1,17 +1,18 @@
-import AddTodoForm from '../components/AddTodoForm'
+import AddTodoForm from "../components/AddTodoForm";
 
-import { connect } from 'react-redux'
-import { addTodo } from '../actions'
+import { connect } from "react-redux";
+import { addTodo } from "../actions";
 
-
-const mapDispatchToProps = (dispatch) => {
+// map dispatch action to props.
+// AddTodoForm props will contain onSubmit property.
+const mapDispatchToProps = dispatch => {
   return {
-    onSubmit: (text) => {
-      dispatch(addTodo(text))
+    onSubmit: text => {
+      dispatch(addTodo(text));
     }
-  }
-}
+  };
+};
 
-let AddTodo = connect(null, mapDispatchToProps)(AddTodoForm)
+let AddTodo = connect(null, mapDispatchToProps)(AddTodoForm);
 
-export default AddTodo
+export default AddTodo;
