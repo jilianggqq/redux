@@ -11,6 +11,7 @@ let AddTodoForm = ({ onSubmit }) => {
         onSubmit={e => {
           e.preventDefault();
           if (!input.value.trim()) {
+            console.log("input value is null!");
             return;
           }
           /*
